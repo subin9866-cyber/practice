@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Pet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Prompt Pet</h1>
+    <p class="subtitle">말을 먹고 자라는 AI 생명체</p>
 
-    <title>Sketch</title>
+    <section class="panel">
+      <label for="apiKeyInput">Gemini API Key</label>
+      <div class="row">
+        <input id="apiKeyInput" type="password" placeholder="API Key를 여기에 붙여넣기">
+        <button id="saveKeyButton">저장</button>
+      </div>
+      <p class="hint">
+        API Key는 GitHub 코드에 저장하지 않고, 이 브라우저에만 저장됩니다.
+      </p>
+    </section>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <section id="canvasArea"></section>
 
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
+    <section class="panel">
+      <label for="chatInput">Prompt Pet에게 말 걸기</label>
+      <div class="row">
+        <input id="chatInput" type="text" placeholder="예: 오늘 너무 피곤해..." autocomplete="off">
+        <button id="sendButton">말하기</button>
+      </div>
+    </section>
 
-  <body>
-    <script src="libraries/p5.min.js"></script>
-    <script src="sketch.js"></script>
-  </body>
+    <section class="dialogue">
+      <h2>대화</h2>
+      <p id="statusText">API Key를 저장하고 말을 걸어보세요.</p>
+      <p id="replyText">아직 아무 말도 하지 않았어요.</p>
+    </section>
+  </main>
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
 </html>
