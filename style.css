@@ -1,8 +1,107 @@
-html, body {
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f3efe7;
+  color: #222;
+}
+
+main {
+  width: min(720px, 92vw);
+  margin: 0 auto;
+  padding: 32px 0 48px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 42px;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 8px;
+  color: #666;
+}
+
+.panel,
+.dialogue {
+  background: white;
+  border: 2px solid #222;
+  border-radius: 18px;
+  padding: 18px;
+  margin: 20px 0;
+  box-shadow: 6px 6px 0 #222;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #222;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 18px;
+  border: 2px solid #222;
+  border-radius: 12px;
+  background: #ffcc4d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffd86f;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: wait;
+}
+
+.hint {
+  margin-bottom: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+#canvasArea {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
 }
 
 canvas {
-  display: block;
+  border: 3px solid #222;
+  border-radius: 22px;
+  box-shadow: 8px 8px 0 #222;
+}
+
+.dialogue h2 {
+  margin-top: 0;
+}
+
+#statusText {
+  color: #777;
+  font-size: 14px;
+}
+
+#replyText {
+  font-size: 20px;
+  line-height: 1.5;
 }
