@@ -13,7 +13,7 @@ let pet = {
   friendship: 30,
   energy: 70,
   color: "#ff9fb2",
-  reply: "안녕! 나는 말을 먹고 자라는 생명체야."
+  reply: "안녕! 나는 대화에 따라 변하는 생명체야."
 };
 
 let chats = [];
@@ -24,7 +24,7 @@ const MODEL_NAME = "gemini-3.5-flash";
 
 const SYSTEM_PROMPT = `
 너는 "Prompt Pet"이라는 작은 AI 생명체다.
-사용자가 말을 걸면 그 말을 먹고 감정과 행동이 변한다.
+사용자가 말을 걸면 그 말에 따라 감정과 행동이 변한다.
 
 반드시 JSON만 출력한다.
 마크다운, 설명문, 코드블록은 절대 쓰지 않는다.
@@ -331,7 +331,7 @@ async function sendMessage() {
   isLoading = true;
   sendButton.disabled = true;
   chatInput.disabled = true;
-  statusText.textContent = "Prompt Pet이 말을 먹는 중...";
+  statusText.textContent = "Prompt Pet이 말을 해석하는 중...";
   replyText.textContent = "생각하는 중...";
 
   chatInput.value = "";
