@@ -1,7 +1,23 @@
 * {
   box-sizing: border-box;
 }
+.intro {
+  background: #fff8d6;
+  border: 2px solid #222;
+  border-radius: 18px;
+  padding: 18px;
+  margin: 20px 0;
+  box-shadow: 6px 6px 0 #222;
+}
 
+.intro h2 {
+  margin-top: 0;
+}
+
+.intro p {
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
